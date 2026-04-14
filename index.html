@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Anniversary</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Great Vibes', cursive;
+      background-color: peachpuff;
+      color: #b22222;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      margin-top: 20%;
+      font-size: 3.5em;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      background: rgba(255, 255, 255, 0.6);
+      display: inline-block;
+      padding: 20px 40px;
+      border-radius: 20px;
+    }
+    nav {
+      margin-top: 40px;
+      background-color: #ff4d6d;
+      padding: 15px;
+      border-radius: 30px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 15px rgba(255, 77, 109, 0.6);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffe6f2;
+      text-shadow: 0 0 10px #fff;
+    }
+    .decor {
+      position: absolute;
+      width: 60px;
+    }
+    .top-left { top: 10px; left: 10px; }
+    .top-right { top: 10px; right: 10px; }
+    .bottom-left { bottom: 10px; left: 10px; }
+    .bottom-right { bottom: 10px; right: 10px; }
+
+    /* Login entry screen */
+    #loginEntry {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: peachpuff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #loginEntry h2 { font-size: 2em; margin: 10px; }
+    #loginEntry input {
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid #ff4d6d;
+      border-radius: 10px;
+      font-size: 1em;
+    }
+    #loginEntry p { font-size: 1.2em; margin: 20px; }
+    #continueBtn {
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #continueBtn:hover {
+      background-color: #ff1a4d;
+      transform: scale(1.1);
+    }
+
+    /* Falling flowers */
+    .flower {
+      position: fixed;
+      top: -60px;
+      width: 50px;
+      animation: fall 3s linear forwards;
+    }
+    @keyframes fall {
+      to { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Login entry -->
+  <div id="loginEntry">
+    <h2>Husband's Full Name</h2>
+    <input type="text" id="husbandName" placeholder="Type husband's name here">
+    <h2>Wife's Full Name</h2>
+    <input type="text" id="wifeName" placeholder="Type wife's name here">
+    <p>Note: your husband worked hard to build this and he loves you soo much which he showed in this site. Go through it by clicking continue.</p>
+    <button id="continueBtn">Continue</button>
+  </div>
+
+  <!-- Decorative icons -->
+  <img src="tulip.png" class="decor top-left">
+  <img src="rose.png" class="decor top-right">
+  <img src="donut.png" class="decor bottom-left">
+  <img src="rose.png" class="decor bottom-right">
+
+  <!-- Main heading -->
+  <h1>💖 Happy 1st Year Anniversary of our Love, Baby! 💖</h1>
+
+  <!-- Navigation bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="ourstory.html">Our Story</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="lovenotes.html">Love Notes</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="secret.html">Secret Message</a>
+  </nav>
+
+  <script>
+    const btn = document.getElementById("continueBtn");
+    const entry = document.getElementById("loginEntry");
+
+    btn.addEventListener("click", () => {
+      const husband = document.getElementById("husbandName").value.trim();
+      const wife = document.getElementById("wifeName").value.trim();
+
+      if (husband === "Boda Akshay" && wife === "Boda Dhanya") {
+if (husband === "Boda Akshay" && wife === "Boda Dhanya") {
+  // Blast of flowers
+  for (let i = 0; i < 15; i++) {
+    const rose = document.createElement("img");
+    rose.src = "rose.png";
+    rose.className = "flower";
+    rose.style.left = Math.random() * window.innerWidth + "px";
+    document.body.appendChild(rose);
+    setTimeout(() => rose.remove(), 3000);
+
+    const tulip = document.createElement("img");
+    tulip.src = "tulip.png";
+    tulip.className = "flower";
+    tulip.style.left = Math.random() * window.innerWidth + "px";
+    document.body.appendChild(tulip);
+    setTimeout(() => tulip.remove(), 3000);
+  }
+
+  // 👉 PASTE FIREWORKS CODE HERE 👇
+  function createFirework() {
+    const firework = document.createElement("div");
+    firework.style.position = "fixed";
+    firework.style.width = "5px";
+    firework.style.height = "5px";
+    firework.style.borderRadius = "50%";
+    firework.style.background = "transparent";
+    firework.style.left = Math.random() * window.innerWidth + "px";
+    firework.style.top = Math.random() * window.innerHeight + "px";
+
+    for (let i = 0; i < 20; i++) {
+      const spark = document.createElement("div");
+      spark.style.position = "absolute";
+      spark.style.width = "5px";
+      spark.style.height = "5px";
+      spark.style.borderRadius = "50%";
+      spark.style.backgroundColor = `hsl(${Math.random()*360},100%,60%)`;
+
+      const angle = Math.random() * 2 * Math.PI;
+      const distance = Math.random() * 80;
+
+      spark.animate([
+        { transform: "translate(0,0)", opacity: 1 },
+        { transform: `translate(${Math.cos(angle)*distance}px, ${Math.sin(angle)*distance}px)`, opacity: 0 }
+      ], {
+        duration: 1000,
+        easing: "ease-out"
+      });
+
+      firework.appendChild(spark);
+    }
+
+    document.body.appendChild(firework);
+    setTimeout(() => firework.remove(), 1000);
+  }
+
+  for (let i = 0; i < 10; i++) {
+    setTimeout(createFirework, i * 300);
+  }
+
+  // Hide login after animation
+  setTimeout(() => {
+    entry.style.display = "none";
+  }, 3500);
+}
+        // Hide login after animation
+        setTimeout(() => {
+          entry.style.display = "none";
+        }, 3500);
+      } else {
+        alert("Please type the correct names to continue!");
+      }
+    });
+  </script>
+</body>
+</html>
